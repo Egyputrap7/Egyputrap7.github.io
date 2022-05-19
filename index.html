@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link >
+        <style>
+            body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.insert{
+	border-bottom: #e73c7e;
+}
+                  
+        </style>
+        <meta charset="utf-8">
+        <title>Halaman Form register</title>
+    </head>
+    <body > 
+
+        <form action="#" method="container">
+            <fieldset>
+            <legend>Registrasi</legend>
+               
+            </div>
+            <p>
+                <label for="nama">Nama:</label>
+                <input type="text" name="nama" placeholder="Nama lengkap" id="nama"/>
+            </p>
+            <p>
+                <label for="username">Username:</label>
+                <input type="text" name="username" placeholder="Username" id="username"/>
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Your email" id="email" />
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="Passowrd" id="password"/>
+            </p>
+            <p>
+                <label for="jeniskelamin">Jenis kelamin:</label>
+                <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+                <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+            </p>
+            <p>
+                <label for="agama">Agama:</label>
+                <select name="agama" id="agama">
+                    <option value="islam">Islam</option>
+                    <option value="kristen">Kristen</option>
+                    <option value="hindu">Hindu</option>
+                    <option value="budha">Budha</option>
+                </select>
+            </p>
+            <p>
+                <label>Biografi:</label>
+                <textarea name="biografi"></textarea>
+            </p>
+            <p>
+                <input type="button" name="submit" value="Daftar" onclick="tampildata()" />
+            </p>
+            </fieldset>
+        </form>
+        <script >
+            function tampildata(){
+    var nama = document.getElementById("nama").value;
+    var user = document.getElementById("username").value;
+    var agama = document.getElementById("agama").value
+    var jeniskel = document.querySelector("input[name=jenis_kelamin]:checked").value
+
+    alert(
+        "nama            : "  + nama+
+        "\nusername      : "  +user+
+        "\nagama         : "  +agama+
+        "\nJenis Kelamin : "  +jeniskel
+    );
+}
+        </script>
+        
+    </body>
+</html>
